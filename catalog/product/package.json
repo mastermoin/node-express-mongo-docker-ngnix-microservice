@@ -1,0 +1,17 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "Product service is responsible to create and read product for this example.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Master Moin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.1",
+    "shared-model-for-ecom-example": "git://github.com/mastermoin/shared-model-for-ecom-example.git"
+  }
+}
