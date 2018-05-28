@@ -4,6 +4,6 @@ var productModel = require('../node_modules/shared-model-for-ecom-example/produc
 var productSchema = mongoose.Schema(Product);
 var Product = module.exports = mongoose.model('products', productModel);
 
-module.exports.addProduct = (product , callback) => {
-    Product.create(product, callback);
+module.exports.addProduct = async (product ) => {
+    return  await Product.create(product);
 };

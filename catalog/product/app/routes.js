@@ -5,15 +5,10 @@ module.exports = function(app) {
 
     const RESOURCE_PATH_V1 = '/api/v1/products/';
     
-    app.post(RESOURCE_PATH_V1 , (req, res) => {
+    app.post(RESOURCE_PATH_V1 , async (req, res) => {
         var product = req.body;
-        ProductCtrl.addProduct(product, (err, savedProduct) => {
-            if(err) {
-                res.status(500);
-                res.json({'message' : 'internal server error'});
-            }
-            res.status(201);
-            res.json(savedProduct); 
-        })
+        savedProduct = await ProductCtrl.addProduct(product);
+        res.status(201);
+        res.json(savedProduct); 
     });
 };
